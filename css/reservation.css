@@ -1,0 +1,86 @@
+/* reservation.css */
+
+/* Layout and spacing */
+.reservation-container {
+  padding-top: 5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.card, .form-group {
+  margin-bottom: 1rem;
+}
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+/* Car image styling */
+.car-img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Form inputs */
+.form-group {
+  position: relative;
+}
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Error/Success message with icon in front */
+.error-msg {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  color: red;
+}
+.error-msg.success {
+  color: green;
+}
+/* Hide when empty */
+.error-msg:empty {
+  display: none;
+}
+
+/* Submit button */
+#submit-btn {
+  border: 1px solid #999;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+#submit-btn:not(:disabled) {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Cancel button */
+#cancel-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+#cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Info messages */
+.info-msg {
+  color: #555;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}

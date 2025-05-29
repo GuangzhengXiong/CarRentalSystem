@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rental System — Reservation</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/reservation.css" />
+</head>
+<body>
+
+  <!-- fixed navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="Car Rental Logo" class="logo" />
+      </a>
+    </div>
+    <div class="nav-center"></div>
+    <div class="nav-right"></div>
+  </nav>
+
+  <main class="reservation-container">
+    <p id="no-selection-msg" class="info-msg" style="display:none;">
+      Please select a vehicle first.
+    </p>
+
+    <p id="unavailable-msg" class="error-msg" style="display:none;">
+      This vehicle is not available. Please choose another.
+    </p>
+
+    <div id="car-details" class="card" style="display:none;">
+      <img id="car-image" class="car-img" src="" alt="" />
+      <div class="card-body">
+        <h3 id="car-title"></h3>
+        <p id="car-type"></p>
+        <p id="car-year"></p>
+        <p id="car-mileage"></p>
+        <p id="car-fuel"></p>
+        <p id="car-price"></p>
+        <p id="car-description"></p>
+      </div>
+    </div>
+
+    <form id="reservation-form" style="display:none;">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" />
+        <span class="error-msg" id="name-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" />
+        <span class="error-msg" id="phone-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" />
+        <span class="error-msg" id="email-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="license_number">Driver's License Number:</label>
+        <input type="text" id="license_number" name="license_number" />
+        <span class="error-msg" id="license_number-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" />
+        <span class="error-msg" id="start_date-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="rental_days">Rental Days:</label>
+        <input type="number" id="rental_days" name="rental_days" min="1" />
+        <span class="error-msg" id="rental_days-error"></span>
+      </div>
+
+      <div id="estimated-total" class="total-price" style="display:none; margin:1rem 0;">
+        <strong>Total Price:</strong>
+        <span id="total-price-display">$0.00</span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" id="submit-btn" disabled>submit</button>
+        <button type="button" id="cancel-btn">Cancel</button>
+      </div>
+    </form>
+
+    <p id="form-msg"></p>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/reservation.js"></script>
+</body>
+</html>

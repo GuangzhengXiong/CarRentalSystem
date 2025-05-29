@@ -1,0 +1,200 @@
+/* index.css — Home page specific styles */
+
+/* 1. Fixed navbar with light gray background */
+.navbar {
+  background: #f0f0f0;               /* light gray */
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  display: flex;                     /* horizontal layout */
+  align-items: center;               /* vertical centering */
+  justify-content: space-between;    /* space out left, center, right */
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* 2. Push content down */
+body {
+  padding-top: 60px;
+}
+
+/* 3. Logo styling */
+.nav-left .logo {
+  height: 40px;
+}
+
+/* 4. Navbar sections */
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* 5. Search+filter container */
+.search-filter {
+  position: relative; /* for dropdowns */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 6. Search input */
+#search-input {
+  width: 250px;
+  height: 36px;
+  padding: 0 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 7. Suggestions list */
+.suggestions-list {
+  position: absolute;
+  top: 38px;                         /* below input */
+  left: 0;
+  width: 250px;
+  background: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  max-height: 180px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1500;
+}
+.suggestions-list li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.suggestions-list li.disabled {
+  color: #999;
+  cursor: default;
+}
+.suggestions-list li:hover:not(.disabled) {
+  background: #f0f0f0;
+}
+
+/* 8. Filter button */
+#filter-btn {
+  height: 36px;
+  padding: 0 1rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 9. Filter dropdown two columns */
+.filter-dropdown {
+  position: absolute;
+  top: 100%; left: 0;
+  width: 360px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 2000;
+  max-height: 280px;
+  overflow-y: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;    /* two equal columns */
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+}
+
+/* 10. Filter group column */
+.filter-column {
+  display: flex;
+  flex-direction: column;
+}
+.filter-group-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.filter-column label {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* 11. Action buttons */
+.filter-actions {
+  grid-column: 1 / span 2;           /* span both columns */
+  display: flex;
+  justify-content: space-between;
+}
+.apply-btn {
+  padding: 0.5rem;
+  background: #28a745;               /* green */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.clear-btn {
+  padding: 0.5rem;
+  background: #dc3545;               /* red */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* 12. Search button */
+.search-btn {
+  height: 36px;
+  padding: 0 1rem;
+  background: #28a745;               /* green */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 13. Reservation icon */
+.reserve-btn {
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+/* 14. Card body padding and spacing */
+.card-body {
+  padding: 1rem;
+  padding-bottom: 20px;              /* extra bottom space */
+}
+
+/* 15. Card title centered */
+.card-body h3 {
+  text-align: center;
+}
+
+/* 16. Card details centered */
+.card-body p {
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+/* 17. Rent button for available cars */
+.rent-btn {
+  display: block;
+  width: 100px;                      /* shorter width */
+  margin: 0.75rem auto 0;            /* centered horizontally */
+  padding: 0.4rem 0;
+  background: #ff8c00;               /* orange */
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* 18. Disabled rent button */
+.rent-btn.disabled,
+.rent-btn[disabled] {
+  background: #ccc !important;
+  color: #666 !important;
+  cursor: default !important;
+}

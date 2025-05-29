@@ -1,0 +1,64 @@
+/* common.css */
+
+/* 1. CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Base body style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 3. Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 4. Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* 5. Buttons */
+button, .reserve-btn, .apply-btn, .search-btn, .rent-btn {
+  cursor: pointer;
+}
+
+/* 6. Grid helper */
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem;
+}
+
+/* 7. Card helper */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* 8. Form elements */
+input, select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 9. Basic button appearance */
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}

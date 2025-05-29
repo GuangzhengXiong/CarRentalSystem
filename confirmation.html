@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Rental System — Confirmation</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/confirmation.css" />
+</head>
+<body>
+
+  <!-- fixed navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="Car Rental Logo" class="logo" />
+      </a>
+    </div>
+    <div class="nav-center"></div>
+    <div class="nav-right"></div>
+  </nav>
+
+  <main class="confirmation-container">
+    <!-- failure message -->
+    <p id="fail-msg" class="error-msg" style="display:none;">
+      Reservation failed: vehicle is no longer available.
+    </p>
+
+    <!-- pending-success block -->
+    <div id="success-block" style="display:none; text-align:left;">
+      <h2>Reservation Pending Confirmation</h2>
+      <p>Your reservation is pending. Click below to confirm and finalize.</p>
+      <ul class="confirmation-details">
+        <li><strong>Vehicle:</strong> <span id="conf-car"></span></li>
+        <li><strong>Rental Period:</strong> <span id="conf-period"></span></li>
+        <li><strong>Name:</strong> <span id="conf-name"></span></li>
+        <li><strong>Start Date:</strong> <span id="conf-start"></span></li>
+        <li><strong>Total Price:</strong> <span id="conf-total"></span></li>
+      </ul>
+    </div>
+
+    <!-- final confirm button -->
+    <div id="confirm-area" style="display:none; text-align:center; margin-top:1rem;">
+      <button id="confirm-btn">Confirm Order</button>
+      <p id="confirm-msg" class="info-msg" style="margin-top:0.5rem;"></p>
+    </div>
+  </main>
+
+  <!-- scripts at end -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/confirmation.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Rental System — Home</title>
+
+  <!-- common base styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- page-specific styles -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- fixed navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- logo links back to home -->
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="Car Rental Logo" class="logo">
+      </a>
+    </div>
+    <div class="nav-center">
+      <!-- search + suggestions + filters -->
+      <div class="search-filter">
+        <input type="text" id="search-input" placeholder="What are you looking for?">
+        <ul id="suggestions" class="suggestions-list"></ul>
+
+        <div class="filter-wrapper">
+          <button id="filter-btn">Category ▾</button>
+          <div id="filter-dropdown" class="filter-dropdown">
+            <div class="filter-column">
+              <div class="filter-group-title">Type</div>
+              <label><input type="checkbox" class="filter-type" value="SUV"> SUV</label>
+              <label><input type="checkbox" class="filter-type" value="Sedan"> Sedan</label>
+              <label><input type="checkbox" class="filter-type" value="Hatchback"> Hatchback</label>
+              <label><input type="checkbox" class="filter-type" value="Pickup"> Pickup</label>
+              <label><input type="checkbox" class="filter-type" value="Coupe"> Coupe</label>
+              <label><input type="checkbox" class="filter-type" value="Convertible"> Convertible</label>
+              <label><input type="checkbox" class="filter-type" value="Wagon"> Wagon</label>
+            </div>
+            <div class="filter-column">
+              <div class="filter-group-title">Brand</div>
+              <label><input type="checkbox" class="filter-brand" value="Toyota"> Toyota</label>
+              <label><input type="checkbox" class="filter-brand" value="Audi"> Audi</label>
+              <label><input type="checkbox" class="filter-brand" value="Mini"> Mini</label>
+              <label><input type="checkbox" class="filter-brand" value="BMW"> BMW</label>
+              <label><input type="checkbox" class="filter-brand" value="Mercedes-Benz"> Mercedes-Benz</label>
+              <label><input type="checkbox" class="filter-brand" value="Land Rover"> Land Rover</label>
+              <label><input type="checkbox" class="filter-brand" value="Volvo"> Volvo</label>
+              <label><input type="checkbox" class="filter-brand" value="Kia"> Kia</label>
+              <label><input type="checkbox" class="filter-brand" value="Ford"> Ford</label>
+              <label><input type="checkbox" class="filter-brand" value="Porsche"> Porsche</label>
+              <label><input type="checkbox" class="filter-brand" value="Dodge"> Dodge</label>
+              <label><input type="checkbox" class="filter-brand" value="Nissan"> Nissan</label>
+              <label><input type="checkbox" class="filter-brand" value="Jeep"> Jeep</label>
+              <label><input type="checkbox" class="filter-brand" value="Lamborghini"> Lamborghini</label>
+              <label><input type="checkbox" class="filter-brand" value="Hyundai"> Hyundai</label>
+              <label><input type="checkbox" class="filter-brand" value="Holden"> Holden</label>
+            </div>
+            <div class="filter-actions">
+              <button id="apply-filters-btn" class="apply-btn">Apply</button>
+              <button id="clear-filters-btn" class="clear-btn">Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <button id="search-btn" class="search-btn">Search</button>
+      </div>
+    </div>
+    <div class="nav-right">
+      <!-- static icon link to reservation page -->
+      <a href="reservation.html" class="reserve-btn" title="Go to Reservation">🚗</a>
+    </div>
+  </nav>
+
+  <!-- main content: car grid -->
+  <main>
+    <div id="car-grid" class="grid-container"></div>
+  </main>
+
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
